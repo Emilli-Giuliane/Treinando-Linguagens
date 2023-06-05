@@ -1,0 +1,16 @@
+//7. Faça um Programa que calcule a área de um quadrado, em seguida mostre o dobro desta área para o usuário.
+//area = base * altura (h). area * 2.
+import java.util.Scanner;
+public class App{
+    public static void main(String[]args){
+        System.out.println("Informe a base e a altura desse quadrado, respectivamente: ");
+Scanner ler = new Scanner(System.in);
+            double base = ler.nextDouble();
+            double altura = ler.nextDouble();
+ler.close();
+            double area = base * altura;
+            double areaDobro = area * 2;
+        System.out.printf("A área é %2.2f. O dobro desta área é %2.2f.",area,areaDobro);
+
+}
+}

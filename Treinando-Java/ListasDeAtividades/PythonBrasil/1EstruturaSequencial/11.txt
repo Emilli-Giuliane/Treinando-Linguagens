@@ -1,0 +1,33 @@
+//11. Faça um Programa que peça 2 números inteiros e um número real. Calcule e mostre:
+import java.util.Scanner;
+public class App{
+    public static void main(String[]args){
+
+Scanner ler = new Scanner(System.in);
+        System.out.print("Insira um número inteiro: ");
+            int n1 = ler.nextInt();
+        System.out.println("");
+
+        System.out.print("Insira um número inteiro: ");
+            int n2 = ler.nextInt();
+        System.out.println("");
+        
+        System.out.print("Insira um número real: ");
+            double n3 = ler.nextDouble();
+        System.out.println("");
+ler.close();
+        
+//a). o produto do dobro do primeiro com metade do segundo .
+            int a = (n1*2)*(n2/2);
+        System.out.println(a);
+
+//b). a soma do triplo do primeiro com o terceiro.
+            double b = (n1*3)+n3;
+        System.out.println(b);
+
+//c). o terceiro elevado ao cubo.
+            double c = Math.pow(n3,3);
+        System.out.println(c);
+
+    }
+}

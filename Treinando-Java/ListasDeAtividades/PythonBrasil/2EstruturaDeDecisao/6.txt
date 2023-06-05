@@ -1,0 +1,26 @@
+//6. Faça um Programa que leia três números e mostre o maior deles.
+import java.util.Scanner;
+public class App{
+    public static void main(String[]args){
+        System.out.print("Escreva o primeiro número >>> ");
+Scanner ler = new Scanner(System.in);
+            int n1 = ler.nextInt();
+        System.out.print("Escreva o segundo número >>> ");
+            int n2 = ler.nextInt();
+        System.out.print("Escreva o terceiro número >>> ");
+            int n3 = ler.nextInt();
+ler.close();
+
+        if(n1 > n2 && n1 > n3){
+            System.out.print(n1+" é o maior número.");
+        }else if(n2 > n1 && n2 > n3){
+            System.out.print(n2+" é o maior número.");
+        }else if(n3 > n1 && n3 > n2){
+            System.out.print(n3+" é o maior número.");
+        }else{
+                System.out.print("Os númeos são iguais");
+        }
+        
+            System.out.print("\n\n");
+    }
+}

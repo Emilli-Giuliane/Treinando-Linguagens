@@ -1,0 +1,16 @@
+//9. Faça um Programa que peça a temperatura em graus Fahrenheit, transforme e mostre a temperatura em graus Celsius.
+//C = 5 * ((F-32) / 9).
+import java.util.Scanner;
+public class App{
+    public static void main(String[]args){
+
+        System.out.print("Sistema para converter temperatura Fahrenheit em graus ceusius. Informe o Fahrenheit: ");
+Scanner ler = new Scanner(System.in);
+            double f = ler.nextDouble();
+ler.close();
+            double c = 5*((f-32)/9);
+
+        System.out.print("A temperatura de Fahrenheirt convertida em Celcius é igual a: "+c);
+
+    }
+}

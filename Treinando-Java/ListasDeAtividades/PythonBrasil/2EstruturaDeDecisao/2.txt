@@ -1,0 +1,15 @@
+//2. Faça um Programa que peça um valor e mostre na tela se o valor é positivo ou negativo.
+import java.util.Scanner;
+public class App{
+    public static void main(String[]args){
+        System.out.print("Informe um valor >>> ");
+Scanner ler = new Scanner(System.in);
+            int valor = ler.nextInt();
+        if(valor > 0){
+            System.out.print("Número positivo. \n\n");
+        }else{
+            System.out.print("Número negativo. \n\n");
+        }
+
+    }
+}

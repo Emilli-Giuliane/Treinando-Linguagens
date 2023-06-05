@@ -1,0 +1,16 @@
+//4. Faça um Programa que verifique se uma letra digitada é vogal ou consoante.
+import java.util.Scanner;
+public class App{
+    public static void main(String[]args){
+        System.out.print("Escreva uma letra >>> ");
+Scanner ler = new Scanner(System.in);
+        char letra = ler.next().charAt(0);
+ler.close();
+            if(letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u'){
+                System.out.printf("A letra \"%s\" é uma vogal.",letra);
+            }else{
+                System.out.printf("A letra \"%s\" é uma consoante.",letra);
+            }
+            System.out.print("\n\n");
+    }
+}

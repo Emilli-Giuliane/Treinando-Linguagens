@@ -1,0 +1,31 @@
+//15.Faça um Programa que pergunte quanto você ganha por hora e o número de horas trabalhadas no mês. Calcule e mostre o total do seu salário no referido mês, sabendo-se que são descontados 11% para o Imposto de Renda, 8% para o INSS e 5% para o sindicato, faça um programa que nos dê:
+import java.util.Scanner;
+public class App{
+    public static void main(String[]args)throws Exception{
+        System.out.print("Quanto você ganha por hora? ");
+Scanner ler = new Scanner(System.in);
+            double ganhaHoras = ler.nextDouble();
+        System.out.println("");
+        System.out.print("Quanto você ganha por horas trabalhadas no mês? ");
+            double ganhaMes = ler.nextDouble();
+ler.close();        
+            double totalMes = ganhaHoras/ganhaMes;
+        
+//a. salário bruto.
+        System.out.print("Salário bruto é "+totalMes);
+//não tinha na questão mas, Imposto de Renda é:
+            double iR = totalMes * 11/100;
+        System.out.print(". Imposto de renda de 11% é "+iR);
+//b. quanto pagou ao INSS.
+            double inss = totalMes * 8/100;
+        System.out.print(". O INSS de 8% é "+inss);
+//c. quanto pagou ao sindicato.
+            double s = totalMes * 5/100;
+        System.out.print(". O Sindicato de 5% é "+s+".");
+//d. o salário líquido.
+            double salarioLiq = totalMes - iR - inss - s;
+        System.out.println("");
+        System.out.print("Seu salário líquido é "+salarioLiq);
+
+    }
+}

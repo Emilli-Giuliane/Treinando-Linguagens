@@ -1,0 +1,23 @@
+//18. Faça um programa que peça o tamanho de um arquivo para download (em MB) e a velocidade de um link de Internet (em Mbps),
+//#calcule e informe o tempo aproximado de download do arquivo usando este link (em minutos).
+import java.util.Scanner;
+public class App{
+    public static void main(String[]args){
+        System.out.print("Informe o tamanho do arquivo para download (em MB): ");
+Scanner ler = new Scanner(System.in);
+            double tamanho = ler.nextDouble();
+        System.out.println("");
+        System.out.print("Informe a velocidade do link de internet (em Mbps): ");
+            float velLink = ler.nextFloat();
+ler.close();
+            double tempDownloadComEsseLink = tamanho / (velLink/8);
+            
+        System.out.println("");
+        System.out.printf("O tempo aproximado de download do arquivo usando este link é de \"%2.0f segundos\".\n\n",tempDownloadComEsseLink);
+       
+    }
+}
+//aprendi a usar:
+//\n= next line
+//\""\
+//%2.0f

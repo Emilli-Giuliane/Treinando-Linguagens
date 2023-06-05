@@ -1,0 +1,20 @@
+//13. Tendo como dado de entrada a altura (h) de uma pessoa, construa um algoritmo que calcule seu peso ideal, utilizando as seguintes fórmulas:
+//a. Para homens: (72.7*h) - 58 //b. Para mulheres: (62.1*h) - 44.7
+import java.util.Scanner;
+public class App{
+    public static void main(String[]args) throws Exception{
+        System.out.println("Calculo do peso ideal para homens e mulheres.");
+        System.out.println("");
+
+Scanner ler = new Scanner(System.in);
+        
+        System.out.print("Informe sua altura: ");
+            double h = ler.nextDouble();
+ler.close();
+        System.out.println();
+                double a = (72.7*h) - 58;
+                double b = (62.1*h) - 44.7;
+        System.out.printf("Se homem, o peso ideal seria '%2.2f'. Se mulher, o peso ideal seria '%2.2f'. ",a,b);
+
+    }
+}

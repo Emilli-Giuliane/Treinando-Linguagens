@@ -1,0 +1,18 @@
+//8. Faça um Programa que pergunte quanto você ganha por hora e o número de horas trabalhadas no mês. Calcule e mostre o total do seu salário no referido mês.
+//salario dividido por carga horaria mensal é igual a quanto ganha por mês.
+import java.util.Scanner;
+public class App{
+    public static void main(String[]args){
+       
+        System.out.println("Quanto você ganha por hora? ");
+Scanner ler = new Scanner(System.in);
+            double ganhaHoras = ler.nextDouble();
+        
+        System.out.println("Qual o número de horas que você trabalha por mês? ");
+            double trabHoras = ler.nextDouble();
+ler.close();
+            double ganhaMes = ganhaHoras/trabHoras;
+        System.out.printf("Você ganha %2.2f por mês.",ganhaMes);
+
+    }
+}

@@ -1,0 +1,23 @@
+//8. Faça um programa que pergunte o preço de três produtos e informe qual produto você deve comprar, sabendo que a decisão é sempre pelo mais barato. 
+import java.util.Scanner;
+public class App{
+    public static void main(String[]args){
+        System.out.print("Escreva o preço do primeiro produto >>> ");
+Scanner ler = new Scanner(System.in);
+            double p1 = ler.nextDouble();
+            System.out.print("Escreva o preço do segundo produto >>> ");
+            double p2 = ler.nextDouble();
+            System.out.print("Escreva o preço do terceiro produto >>> ");
+            double p3 = ler.nextDouble();
+            ler.close();
+            if(p1 < p2 && p1 < p3){
+                System.out.print("Compre o primeiro produto, pois é mais barato");
+            }else if(p2<p1&&p2<p3){
+                System.out.print("Compre o segundo produto, pois é mais barato");
+            }else if(p3<p1&&p3<p2){
+                System.out.print("Compre o terceiro produto, pois é mais barato");
+            }
+
+            System.out.print("\n\n");
+    }
+}

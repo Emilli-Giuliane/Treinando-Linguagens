@@ -1,0 +1,22 @@
+//4. Faça um Programa que peça as 4 notas bimestrais e mostre a média.
+import java.util.Scanner;
+public class App {
+    public static void main(String[] args) throws Exception {
+Scanner ler = new Scanner(System.in);
+        System.out.println("Insira sua nota do primeiro, segundo, terceiro e quarto bimestre nesta mesma ordem: ");
+            int b1 = ler.nextInt();
+            int b2 = ler.nextInt();
+            int b3 = ler.nextInt();
+            int b4 = ler.nextInt();
+ler.close();
+            int media = (b1+b2+b3+b4)/4;
+
+        System.out.println("Sua média é "+media);
+//ou(4.2), decisão(ou repetição, não sei bem ainda)
+        if(media >= 70){
+            System.out.printf("Sua nota é igual a %d. Você foi aprovado.",media);
+        }else{
+            System.out.printf("Sua nota é igual a %d. Você foi reprovado.",media);
+        }
+    }
+}

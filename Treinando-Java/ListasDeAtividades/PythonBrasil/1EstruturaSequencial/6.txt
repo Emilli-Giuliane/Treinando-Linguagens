@@ -1,0 +1,13 @@
+//6. Faça um Programa que peça o raio de um círculo, calcule e mostre sua área.
+import java.util.Scanner;
+public class App{
+    public static void main(String[]args){
+        System.out.print("Insira o raio do círculo: ");
+Scanner ler = new Scanner(System.in);
+            double raio = ler.nextDouble();
+ler.close();
+            double area = 3.14 * Math.pow(raio,2);
+        System.out.println();
+        System.out.print("A area desse círculo é igual a: "+area);
+    }
+}

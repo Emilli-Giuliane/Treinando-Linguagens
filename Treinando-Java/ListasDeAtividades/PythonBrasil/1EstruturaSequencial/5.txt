@@ -1,0 +1,12 @@
+//5. Faça um Programa que converta metros para centímetros.
+import java.util.Scanner;
+public class App{
+public static void main(String[]args){
+    System.out.println("Insira o metro: ");
+Scanner ler = new Scanner(System.in);
+        double m = ler.nextDouble();
+ler.close();
+        double c = m * 100;
+    System.out.println("O comprimento em centimetro é igual a: "+c);
+    }
+}

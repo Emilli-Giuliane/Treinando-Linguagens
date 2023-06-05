@@ -1,0 +1,20 @@
+//16. Faça um programa para uma loja de tintas.v
+//O programa deverá pedir o tamanho em metros quadrados da área a ser pintada.
+// Considere que a cobertura da tinta é de 1 litro para cada 3 metros quadrados e que a tinta é vendida em latas de 18 litros, que custam R$ 80,00.
+//Informe ao usuário a quantidades de latas de tinta a serem compradas e o preço total.
+import java.util.Scanner;
+public class App{
+    public static void main(String[]args){
+        System.out.println("--Loja de tintas--");
+
+        System.out.print("Informe o tamanho da área em metros quadrados que deseja pintar: ");
+Scanner ler = new Scanner(System.in);
+            int tamanhoArea = ler.nextInt();
+ler.close();
+            final int capaLata = 18;
+            int quantLitros = tamanhoArea / 3;
+            double quantLatas = Math.ceil(quantLitros / capaLata);
+            double precoTotal = quantLatas * 80.0;
+        System.out.printf("A quantidade de latas de tinta que vai precisar equivale a %d e o preço total é igual a %2.2f.",quantLatas,precoTotal);
+    }
+}

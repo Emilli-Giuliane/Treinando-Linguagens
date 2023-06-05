@@ -1,0 +1,21 @@
+//3. Faça um Programa que verifique se uma letra digitada é "F" ou "M". Conforme a letra escrever: F - Feminino, M - Masculino, Sexo Inválido.
+import java.util.Scanner;
+public class App{
+    public static void main(String[]args){
+        System.out.print("Escreva um sexo (M para masculino/F para feminino) >>> ");
+Scanner ler = new Scanner(System.in);
+            char sexo = ler.next().charAt(0);
+            String genero = "";
+ler.close();
+        if(sexo == 'M' || sexo == 'm'){
+            genero = "Masculino";
+            
+        }else if(sexo == 'F' || sexo == 'f'){
+            genero = "Feminino";
+        }else{
+            genero = "Inválido";
+        }
+        System.out.printf("O genero é \"%s\".",genero);
+        System.out.print("\n\n");
+    }
+}

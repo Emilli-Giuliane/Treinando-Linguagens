@@ -1,0 +1,16 @@
+//10. Faça um Programa que peça a temperatura em graus Celsius, transforme e mostre em graus Fahrenheit.
+//(0 °C × 9/5) + 32 = f
+import java.util.Scanner;
+public class App{
+    public static void main(String[]args){
+        
+        System.out.print("Informe os Celsius: ");
+Scanner ler = new Scanner(System.in);
+            double c = ler.nextDouble();
+ler.close();
+            double f = (c * 9/5) + 32;
+
+        System.out.print("A temperatura em Celsius convertida em graus Fahreinheit é igual a: "+f);
+
+    }
+}

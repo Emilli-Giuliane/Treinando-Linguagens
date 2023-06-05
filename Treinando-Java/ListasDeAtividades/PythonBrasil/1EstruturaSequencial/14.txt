@@ -1,0 +1,17 @@
+//14. João Papo-de-Pescador, homem de bem, comprou um microcomputador para controlar o rendimento diário de seu trabalho. Toda vez que ele traz um peso de peixes maior que o estabelecido pelo regulamento de pesca do estado de São Paulo (50 quilos) deve pagar uma multa de R$ 4,00 por quilo excedente. João precisa que você faça um programa que leia a variável peso (peso de peixes) e calcule o excesso. Gravar na variável excesso a quantidade de quilos além do limite e na variável multa o valor da multa que João deverá pagar. Imprima os dados do programa com as mensagens adequadas.
+import java.util.Scanner;
+public class App{
+    public static void main(String[]args)throws Exception{
+        System.out.print("Programa para ajudar joão a pesar os peixes.");
+        System.out.println("");
+
+        System.out.print("Informe o peso do peixe: ");
+Scanner ler = new Scanner(System.in);
+            double peso = ler.nextDouble();
+ler.close();
+        
+            double excesso = peso - 50;
+            double multa = excesso * 4;
+        System.out.printf("Seu João, o excesso de peso é %2.2f. E a multa ficará no valor de %2.2f.",excesso,multa);
+    }
+}

@@ -1,0 +1,16 @@
+//1. Faça um Programa que peça dois números e imprima o maior deles.
+import java.util.Scanner;
+public class App{
+    public static void main(String[]args){
+        System.out.print("Informe seu primeiro número >>> ");
+Scanner ler = new Scanner(System.in);
+            double n1 = ler.nextDouble();
+        System.out.print("Informe seu segundo número >>> ");
+            double n2 = ler.nextDouble();
+        if(n1 > n2){
+            System.out.printf("Primeiro número \"%2.2f\" é maior que o segundo número \"%2.2f\".",n1,n2);
+        }else{
+            System.out.printf("Segundo número \"%2.2f\" é maior que o primeiro número \"%2.2f\".",n2,n1);
+        }
+    }
+}

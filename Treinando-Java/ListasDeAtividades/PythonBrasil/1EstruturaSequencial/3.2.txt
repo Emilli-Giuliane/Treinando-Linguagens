@@ -1,0 +1,30 @@
+//3.2
+import java.util.Scanner;
+public class App {
+    public static void main(String[] args) throws Exception {
+                Scanner ler = new Scanner(System.in);
+        System.out.println("Insira seu número: ");
+            int n1 = ler.nextInt();
+        System.out.println("Insira seu número: ");
+            int n2 = ler.nextInt();
+                ler.close();
+            int soma = n1 + n2;
+            int subtracao = n1 - n2;
+            int multiplicacao = n1 * n2;
+            int divisao = n1 / n2;
+            int divResto = n1 % n2;
+        System.out.println(n1 + " dividido por " + n2 + "=" + divResto);
+        System.out.printf("A soma é: %d. A subtração é: %d. A multiplicação é: %d. A divisão é: %d.",soma,subtracao,multiplicacao,divisao);
+//ou, se eu melhorar isso ficaria desse jeito:
+        System.out.println();
+        System.out.println("A soma é: "+soma+". A subtração é: "+subtracao+". A multiplicação é: "+multiplicacao+". A divisão é:"+divisao+". E o resto da divisão é: "+divResto);
+//e tem esse jeito também:
+        System.out.println();
+        System.out.println("A soma é: "+soma);
+        System.out.println("A subtração é: "+subtracao);
+        System.out.println("A multiplicação é: "+multiplicacao);
+        System.out.println("A divisão é: "+divisao);
+        System.out.println("O resto é: "+divResto);
+
+    }
+}
