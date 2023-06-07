@@ -20,18 +20,39 @@ public class Atv12{
         double horasMes = read.nextDouble();
         read.close();
         
-        double salarioBruto,ir,inss,fgts,totalDescontos,salarioLiquido;
+        double salarioBruto,ir,inss,fgts,totalDescontos,salarioLiquido,totalDescontoIr,totalDescontoInss,totalFgts;
+        String descontoIr,descontoInss,descontoFgts;
         salarioBruto = ganhaHora * horasMes;
+        descontoInss = "10%";
         inss = 0.1;
+        descontoFgts = "11%";
         fgts = 1.1;
+//apenas printe o FGTS na tela para o usuário ver
 
         if(salarioBruto <= 900){
-            ir = 0;
-            totalDescontos = inss + ir;
-//            salarioLiquido = 
-//apenas printe o FGTS na tela para o usuário ver
+            descontoIr = "Isento";
+            ir = 0;            
+        }else if(salarioBruto <= 1500){
+            descontoIr = "5%";
+            ir = 0.05;
+        }else if(salarioBruto <= 2500){
+            descontoIr = "10%";
+            ir = 0.1;
+        }else{
+            descontoIr = "20%";
+            ir = 0.2;
         }
-        
 
+        totalDescontoIr = ir * salarioBruto;
+        totalFgts = fgts * salarioBruto;
+        totalDescontoInss = inss * salarioBruto;
+        totalDescontos = totalDescontoInss + totalDescontoIr;
+        salarioLiquido = salarioBruto - totalDescontos;
+        System.out.printf("Salario bruto: (%2.0f * %2.0f)           : R$%2.0f. \n",ganhaHora,horasMes,salarioBruto);
+        System.out.printf("(-) IR (%s)                           : R$%2.0f.\n",descontoIr,totalDescontoIr);
+        System.out.printf("(-) INSS (%s)                          : R$%2.0f.\n",descontoInss,totalDescontoInss);
+        System.out.printf("FGTS (%s)                             : R$%2.2f.\n",descontoFgts,totalFgts);
+        System.out.printf("Total de descontos                         : R$%2.0f.\n",totalDescontos);
+        System.out.printf("Salário líquido                             : R$%2.0f.\n",salarioLiquido);
     }
 }
