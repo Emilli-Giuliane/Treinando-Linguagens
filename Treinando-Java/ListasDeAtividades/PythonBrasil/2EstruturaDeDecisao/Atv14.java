@@ -17,8 +17,8 @@ public class Atv14{
         nota = nota1 + nota2;
         media = nota/2;
 //self note: String conceito precisava receber um valor. decidi de primeira colocar como " ", porém notei que quando testava uma média bem maior maior que "10.0" não aparecia nada, então decidi colocar algo no lugar.
-        String conceito = "Easter ovo";
-        String conceitoAluno = "Outro pascoa de egg";
+        String conceito = "Easter egg";
+        String conceitoAluno = "Outro pascoa de ovo";
 
         if(media >= 0 && media < 4.0){
             conceito = "E";
