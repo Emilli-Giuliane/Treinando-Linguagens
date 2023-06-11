@@ -1,0 +1,56 @@
+LEIA os textos a seguir:
+Fonte: https://drauziovarella.uol.com.br/alimentacao/quanta-agua-precisamos-beber-por-dia/
+
+Agora, LEIA, atentamente O Contexto a seguir:
+
+ 
+
+A empresa ACME Ltda, pensando no bem-estar de seus funcionários, contratou você para desenvolver um aplicativo, para ajudar seus funcionários a se hidratarem melhor.
+
+ 
+
+A encomenda consiste no seguinte:
+
+Você deverá desenvolver um programa em Java, que solicite ao funcionário:
+
+O nome do funcionário;
+O peso atual dele em kg;
+A quantidade de água já ingerida no dia, em litros.
+A seguir, o programa deverá calcular:
+
+A quantidade ideal de água, em litros, considerando a fórmula descrita no texto 2, de 35 ml de água por quilo por dia;
+A quantidade a ingerir, subtraindo a quantidade já ingerida da quantidade ideal a ingerir por dia;
+Por fim, seu programa deverá imprimir:
+
+O nome do funcionário;
+O peso do funcionário
+A quantidade de água ingerida;
+A quantidade ideal de água a ingerir;
+Se a quantidade a ingerir seja negativa, imprimir a mensagem “Parabéns, você atingiu a meta de hidratação diária”;
+Caso contrário, se quantidade a ingerir seja zero ou positiva, imprimir a mensagem “Continue focado em se hidratar por hoje, ainda faltam [x] litros! Você consegue!”;
+ 
+
+Para auxiliar em sua tarefa, a ACME Ltda contratou um analista de sistemas, que organizou a demanda num formato de requisitos:
+
+Código requisito:     Tipo requisito:       Descrição:
+Req01                 Entrada               Solicitar o nome do funcionário
+
+Req02                 Entrada               Solicitar o peso do funcionário em kg
+
+Req03                 Entrada               Solicitar a água já ingerida pelo funcionário no dia de hoje
+
+Req04                 Processamento         Calcular a quantidade ideal de água a ingerir por dia em litros.
+                                                Fórmula: (Peso X 35ml) / 1.000  . Arredondar com zero casas decimais para cima.
+Req05                 Processamento         Calcular a quantidade a ingerir no dia.  Fórmula: Quantidade ideal a Ingerir – Quantidade Ingerida
+
+Req06                 Saída                 Imprimir o nome do funcionário
+
+Req07                 Saída                 Imprimir o peso do funcionário
+
+Req08                 Saída                 A quantidade de água ingerida
+
+Req09                 Saída                 A quantidade ideal de água a ingerir
+
+Req10                 Saída                 Caso a quantidade a ingerir seja negativa, imprimir a mensagem “Parabéns, você atingiu a meta de hidratação diária”;
+                                            Caso contrário, se quantidade a ingerir seja zero ou positiva, imprimir a mensagem “Continue focado em se hidratar por hoje, ainda faltam [x] litros! Você consegue!”;
+Req11                 Qualidade             Desenvolver o código em Java
