@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Atv19 {
     public static void main(String[]args) {
         Scanner read = new Scanner(System.in);
-        System.out.println("Informe um número de três dígitos: ");
+        System.out.println("Informe um número de três dígitos para que o programa possa dizer qual o valor de cada casa decimal: ");
         int n = read.nextInt();
         read.close();
         int unidade = (n%100)%10;
