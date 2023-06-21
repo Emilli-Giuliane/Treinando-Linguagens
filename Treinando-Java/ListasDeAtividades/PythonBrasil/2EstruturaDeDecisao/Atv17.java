@@ -14,6 +14,6 @@ public class Atv17{
         }else if(ano % 4 == 0 || ano % 400 == 0){
             System.out.print("O ano \""+ano+"\" é bissexto!");
         } 
-    
+    read.close();
     }
 }
