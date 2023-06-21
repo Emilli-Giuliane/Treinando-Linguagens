@@ -44,6 +44,6 @@ public class Atv16{
             double x1 = ((-b) + Math.sqrt(delta))/(2*a);
             double x2 = ((-b) - Math.sqrt(delta))/(2*a);
             System.out.println("O valor de \"x¹\" é: \"x¹ = "+ x1 + "\".\nO valor de \"x²\" é: \"x² = "+ x2 +"\".");
-        }
+        }read.close();
     }
 }
