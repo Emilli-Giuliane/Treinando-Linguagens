@@ -1,0 +1,38 @@
+// Jvdroid-main:
+
+//Atv1 
+public class Bola {
+    private String cor;
+    private double circunferencia;
+    private String material;
+
+    public String getCor() {
+        return cor;
+        }
+    public double getCircunferencia() {
+        return circunferencia;
+        }
+    public String getMaterial() {
+        return material;
+        }
+
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+    public void setCircunferencia(double circunferencia) {
+        this.circunferencia = circunferencia;
+    }
+    public void setMaterial(String material) {
+        this.material = material;
+    }
+}
+
+//testando minha classe:
+
+public class Atv {
+    public static void main (String args[]) {
+        Bola b = new Bola();
+        b.setCor("Amarelo");
+        System.out.println(b.getCor());
+    }
+}
