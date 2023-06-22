@@ -1,0 +1,85 @@
+import java.util.Scanner;
+
+class Ponto {
+    private int x;
+    private int y;
+
+    public Ponto(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public void imprimir() {
+        System.out.println("Ponto: (" + x + ", " + y + ")");
+    }
+}
+
+class Retangulo {
+    private Ponto pontoInicial;
+    private int largura;
+    private int altura;
+
+    public Retangulo(Ponto pontoInicial, int largura, int altura) {
+        this.pontoInicial = pontoInicial;
+        this.largura = largura;
+        this.altura = altura;
+    }
+
+    public Ponto encontrarCentro() {
+        int centroX = pontoInicial.getX() + largura / 2;
+        int centroY = pontoInicial.getY() + altura / 2;
+        return new Ponto(centroX, centroY);
+    }
+}
+
+//Testando minha classe: 
+
+public class Atv{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite as coordenadas do ponto inicial (x y): ");
+        int x = scanner.nextInt();
+        int y = scanner.nextInt();
+        Ponto pontoInicial = new Ponto(x, y);
+
+        System.out.print("Digite a largura do retângulo: ");
+        int largura = scanner.nextInt();
+
+        System.out.print("Digite a altura do retângulo: ");
+        int altura = scanner.nextInt();
+
+        Retangulo retangulo = new Retangulo(pontoInicial, largura, altura);
+
+        int opcao;
+        do {
+            System.out.println("Menu:");
+            System.out.println("1. Alterar valores do retângulo");
+            System.out.println("2. Imprimir centro do retângulo");
+            System.out.println("0. Sair");
+            System.out.print("Escolha uma opção: ");
+            opcao = scanner.nextInt();
+
+            switch (opcao) {
+                case 1:
+                    System.out.print("Digite as coordenadas do ponto inicial (x y): ");
+                    x = scanner.nextInt();
+                    y = scanner.nextInt();
+                    pontoInicial = new Ponto(x, y);
+                    retangulo = new Retangulo(pontoInicial, largura, altura);
+                    break;
+                case 2:
+                    Ponto centro = retangulo.encontrarCentro();
+                    centro.imprimir();
+                    break;
+                case 0:
+                    System.out.println("Saindo...");
+                    break;
+                default:
+                    System.out.println("Opção inválida.");
+            }
+        } while (opcao != 0);
+
+        scanner.close();
+    }
+}
