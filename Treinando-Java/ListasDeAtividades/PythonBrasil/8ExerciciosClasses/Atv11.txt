@@ -1,0 +1,34 @@
+public class Carro {
+    private double consumo;
+    private double combustivel;
+    public Carro(double consumo) {
+        this.consumo = consumo;
+        this.combustivel = 0;
+    }
+
+    public void andar(double distancia) {
+        double combustivelNecessario = distancia / consumo;
+        if (combustivelNecessario <= combustivel) {
+            combustivel -= combustivelNecessario;
+            System.out.println("O carro percorreu "+ distancia + " km.");
+        } else {
+            System.out.println("O carro não possui combustível suficiente para percorrer essa distância.");
+        }
+    }
+
+    public double obterGasolina() {
+        return combustivel;
+    }
+
+    public void adicionarGasolina(double quantidade) {
+        combustivel += quantidade;
+        System.out.println(quantidade + " litros de combustível foram adicionados ao tanque.");
+    }
+
+    public static void main(String[] args) {
+        Carro meuFusca = new Carro(15); 
+        meuFusca.adicionarGasolina(20); 
+        meuFusca.andar(100);
+        System.out.println("Combustível restante: " + meuFusca.obterGasolina() + " litros");
+    }
+}
