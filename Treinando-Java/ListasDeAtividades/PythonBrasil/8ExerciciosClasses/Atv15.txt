@@ -1,0 +1,86 @@
+//classe do BichinhoVirtual da Atv7 com os aprimoramentos requiridos:
+
+public class BichinhoVirtual {
+    private String nome;
+    private int fome;
+    private int saude;
+    private int idade;
+
+    public BichinhoVirtual(String nome, int fome, int saude, int idade) {
+        this.nome = nome;
+        this.fome = fome;
+        this.saude = saude;
+        this.idade = idade;
+    }
+
+    public void alterarNome(String novoNome) {
+        this.nome = novoNome;
+    }
+
+    public void alimentar(int quantidadeComida) {
+        this.fome -= quantidadeComida;
+        if (this.fome < 0) {
+            this.fome = 0;
+        }
+    }
+
+    public void brincar(int tempoBrincadeira) {
+        this.saude += tempoBrincadeira;
+        if (this.saude > 10) {
+            this.saude = 10;
+        }
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public int getFome() {
+        return fome;
+    }
+
+    public int getSaude() {
+        return saude;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public String getHumor() {
+        if (fome < 5 && saude >= 7) {
+            return "Feliz";
+        } else if (fome >= 5 && saude >= 7) {
+            return "Faminto";
+        } else if (fome < 5 && saude < 7) {
+            return "Triste";
+        } else {
+            return "Muito triste";
+        }
+    }
+}
+
+//Testando minha classe:
+
+public class Atv {
+    public static void main(String[] args) {
+        BichinhoVirtual tamagotchi = new BichinhoVirtual("Maurio", 3, 8, 2);
+
+        System.out.println("Nome: " + tamagotchi.getNome());
+        System.out.println("Fome: " + tamagotchi.getFome());
+        System.out.println("Saúde: " + tamagotchi.getSaude());
+        System.out.println("Idade: " + tamagotchi.getIdade());
+        System.out.println("Humor: " + tamagotchi.getHumor());
+
+        tamagotchi.alterarNome("Novo Bichinho");
+        tamagotchi.alimentar(6);
+        tamagotchi.brincar(4);
+        tamagotchi.alterarIdade(3);
+
+        System.out.println("Nome após alteração: " + tamagotchi.getNome());
+        System.out.println("Fome após alimentação: " + tamagotchi.getFome());
+        System.out.println("Saúde após brincadeira: " + tamagotchi.getSaude());
+        System.out.println("Idade após alteração: " + tamagotchi.getIdade());
+        System.out.println("Humor após ações: " + tamagotchi.getHumor());
+    }
+}
