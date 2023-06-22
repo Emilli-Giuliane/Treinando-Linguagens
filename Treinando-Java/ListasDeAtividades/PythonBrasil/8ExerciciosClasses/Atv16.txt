@@ -1,0 +1,108 @@
+//mais aprimoramentos na classe da Atv7
+
+import java.util.Scanner;
+
+public class BichinhoVirtual {
+    private String nome;
+    private int fome;
+    private int saude;
+    private int idade;
+
+    public BichinhoVirtual(String nome, int fome, int saude, int idade) {
+        this.nome = nome;
+        this.fome = fome;
+        this.saude = saude;
+        this.idade = idade;
+    }
+
+    public void alterarNome(String novoNome) {
+        this.nome = novoNome;
+    }
+
+    public void alimentar(int quantidadeComida) {
+        this.fome -= quantidadeComida;
+        if (this.fome < 0) {
+            this.fome = 0;
+        }
+    }
+
+    public void brincar(int tempoBrincadeira) {
+        this.saude += tempoBrincadeira;
+        if (this.saude > 10) {
+            this.saude = 10;
+        }
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public int getFome() {
+        return fome;
+    }
+
+    public int getSaude() {
+        return saude;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public String getHumor() {
+        if (fome < 5 && saude >= 7) {
+            return "Feliz";
+        } else if (fome >= 5 && saude >= 7) {
+            return "Faminto";
+        } else if (fome < 5 && saude < 7) {
+            return "Triste";
+        } else {
+            return "Muito triste";
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Nome: " + nome + ", Fome: " + fome + ", Saúde: " + saude + ", Idade: " + idade;
+    }
+
+    public static void main(String[] args) {
+        BichinhoVirtual bichinho = new BichinhoVirtual("Maurio", 3, 8, 2);
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            System.out.println("Escolha uma opção:");
+            System.out.println("1 - Alimentar");
+            System.out.println("2 - Brincar");
+            System.out.println("3 - Alterar Nome");
+            System.out.println("4 - Ver Humor");
+            System.out.println("5 - Opção Secreta");
+            System.out.println("0 - Sair");
+
+            int opcao = scanner.nextInt();
+
+            if (opcao == 1) {
+                System.out.println("Digite a quantidade de comida: ");
+                int quantidadeComida = scanner.nextInt();
+                bichinho.alimentar(quantidadeComida);
+            } else if (opcao == 2) {
+                System.out.println("Digite o tempo de brincadeira: ");
+                int tempoBrincadeira = scanner.nextInt();
+                bichinho.brincar(tempoBrincadeira);
+            } else if (opcao == 3) {
+                System.out.println("Digite o novo nome: ");
+                String novoNome = scanner.next();
+                bichinho.alterarNome(novoNome);
+            } else if (opcao == 4) {
+                System.out.println("Humor: " + bichinho.getHumor());
+            } else if (opcao == 5) {
+                System.out.println(bichinho);
+            } else if (opcao == 0) {
+                System.out.println("Saindo...");
+                break;
+            } else {
+                System.out.println("Opção inválida. Digite novamente.");
+            }
+        }
+    }
+}
