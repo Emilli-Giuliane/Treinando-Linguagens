@@ -1,0 +1,27 @@
+public class ContaInvestimento {
+    private double saldo;
+    private double taxaJuros;
+
+    public ContaInvestimento(double saldoInicial, double taxaJuros) {
+        this.saldo = saldoInicial;
+        this.taxaJuros = taxaJuros;
+    }
+
+    public void adicioneJuros() {
+        double juros = saldo * taxaJuros / 100;
+        saldo += juros;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public static void main(String[] args) {
+        ContaInvestimento poupanca = new ContaInvestimento(1000.0, 10.0); // Saldo inicial de R$1000,00 e taxa de juros de 10%
+
+        for (int i = 1; i <= 5; i++) {
+            poupanca.adicioneJuros();
+            System.out.println("Saldo após " + i + "ª aplicação de juros: R$" + poupanca.getSaldo());
+        }
+    }
+}
