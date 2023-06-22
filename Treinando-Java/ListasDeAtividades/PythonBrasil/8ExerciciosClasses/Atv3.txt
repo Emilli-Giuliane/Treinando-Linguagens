@@ -1,0 +1,39 @@
+public class Retangulo {
+    private double ladoA;
+    private double ladoB;
+    public double getLadoA() {
+        return ladoA;
+    }
+    public double getLadoB() {
+        return ladoB;
+    }
+    public void setLadoA(double ladoA) {
+        this.ladoA = ladoA;
+    }
+    public void setLadoB(double ladoB) {
+        this.ladoB = ladoB;
+    }
+    public double area() {
+        return ladoA * ladoB;
+    }
+    public double perimetro() {
+        return (2*ladoA + 2*ladoB);
+    }
+}
+
+//testando minha classe
+
+import java.util.Scanner;
+public class Atv {
+    public static void main(String[] args) {
+        Scanner read = new Scanner(System.in);
+        Retangulo retengulo = new Retangulo();
+        System.out.println("Informe o valor da altura: ");
+        retengulo.setLadoA(read.nextDouble());
+        System.out.println("Informe o valor da base: ");
+        retengulo.setLadoB(sc.nextDouble());
+        read.close();
+        System.out.println("A área é igual a" + retengulo.area());
+        System.out.println("Perimetro é igual a " + r.perimetro());
+    }
+}
