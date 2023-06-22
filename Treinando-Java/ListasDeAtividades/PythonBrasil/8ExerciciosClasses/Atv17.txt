@@ -1,0 +1,120 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+class Bichinho {
+    private String nome;
+    private int fome;
+    private int saude;
+
+    public Bichinho(String nome, int fome, int saude) {
+        this.nome = nome;
+        this.fome = fome;
+        this.saude = saude;
+    }
+
+    public void alimentar() {
+        fome -= 1;
+        System.out.println(nome + " foi alimentado.");
+    }
+
+    public void brincar() {
+        saude += 1;
+        System.out.println(nome + " brincou.");
+    }
+
+    public void ouvir() {
+        System.out.println(nome + " está fazendo algum barulho.");
+    }
+
+    public void verificarEstado() {
+        System.out.println("Estado de " + nome + ": Fome: " + fome + " | Saúde: " + saude);
+    }
+}
+
+class FazendaBichinhos {
+    private List<Bichinho> bichinhos;
+
+    public FazendaBichinhos() {
+        bichinhos = new ArrayList<>();
+    }
+
+    public void adicionarBichinho(Bichinho bichinho) {
+        bichinhos.add(bichinho);
+    }
+
+    public void alimentarTodos() {
+        for (Bichinho bichinho : bichinhos) {
+            bichinho.alimentar();
+        }
+    }
+
+    public void brincarTodos() {
+        for (Bichinho bichinho : bichinhos) {
+            bichinho.brincar();
+        }
+    }
+
+    public void ouvirTodos() {
+        for (Bichinho bichinho : bichinhos) {
+            bichinho.ouvir();
+        }
+    }
+
+    public void verificarEstadoTodos() {
+        for (Bichinho bichinho : bichinhos) {
+            bichinho.verificarEstado();
+        }
+    }
+}
+
+public class FazendaBichinhosApp {
+    public static void main(String[] args) {
+        FazendaBichinhos fazenda = new FazendaBichinhos();
+
+        //Cria e randomiza os bichinhos
+        Random random = new Random();
+        for (int i = 1; i <= 5; i++) {
+            String nome = "Bichinho " + i;
+            int fome = random.nextInt(10);
+            int saude = random.nextInt(10);
+            Bichinho bichinho = new Bichinho(nome, fome, saude);
+            fazenda.adicionarBichinho(bichinho);
+        }
+
+        // Menu
+        int opcao;
+        do {
+            System.out.println("\n=== FAZENDA DE BICHINHOS ===");
+            System.out.println("1. Alimentar todos os bichinhos");
+            System.out.println("2. Brincar com todos os bichinhos");
+            System.out.println("3. Ouvir todos os bichinhos");
+            System.out.println("4. Verificar estado de todos os bichinhos");
+            System.out.println("0. Sair");
+
+            System.out.print("Escolha uma opção: ");
+            opcao = Integer.parseInt(System.console().readLine());
+
+            switch (opcao) {
+                case 1:
+                    fazenda.alimentarTodos();
+                    break;
+                case 2:
+                    fazenda.brincarTodos();
+                    break;
+                case 3:
+                    fazenda.ouvirTodos();
+                    break;
+                case 4:
+                    fazenda.verificarEstadoTodos();
+                    break;
+                case 0:
+                    System.out.println("Saindo...");
+                    break;
+                default:
+                    System.out.println("Opção inválida. Tente novamente.");
+                    break;
+            }
+        } while (opcao != 0);
+    }
+}
