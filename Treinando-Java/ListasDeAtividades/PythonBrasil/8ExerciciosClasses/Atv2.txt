@@ -1,0 +1,25 @@
+public class Quadrado{
+    public double tamanhoLado;
+    
+    public double getTamanhoLado(){
+        return tamanhoLado;
+        }
+    public void setTamanhoLado(double lado){
+            lado = tamanhoLado;
+    }
+    public double area(){
+        return tamanhoLado * tamanhoLado;
+        }
+
+
+    }
+
+//testando minha classe:
+public class Atv{
+    public static void main(String[] args) {
+        Quadrado quadredo = new Quadrado();
+        quadredo.setTamanhoLado(5);
+        System.out.println(quadredo.getTamanhoLado());
+        System.out.println(quadredo.area());
+    }
+}
