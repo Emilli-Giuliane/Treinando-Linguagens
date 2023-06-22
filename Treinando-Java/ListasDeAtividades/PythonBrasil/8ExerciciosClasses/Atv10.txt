@@ -1,0 +1,115 @@
+import java.util.Scanner;
+
+class BombaCombustivel {
+    private String tipoCombustivel;
+    private double valorLitro;
+    private double quantidadeCombustivel;
+
+    public BombaCombustivel(String tipoCombustivel, double valorLitro, double quantidadeCombustivel) {
+        this.tipoCombustivel = tipoCombustivel;
+        this.valorLitro = valorLitro;
+        this.quantidadeCombustivel = quantidadeCombustivel;
+    }
+
+    public void abastecerPorValor(double valor) {
+        double litrosAbastecidos = valor / valorLitro;
+        if (litrosAbastecidos > quantidadeCombustivel) {
+            System.out.println("Não há combustível suficiente na bomba.");
+        } else {
+            quantidadeCombustivel -= litrosAbastecidos;
+            System.out.println("Abastecimento realizado. Litros abastecidos: " + litrosAbastecidos);
+        }
+    }
+
+    public void abastecerPorLitro(double litros) {
+        double valorAbastecido = litros * valorLitro;
+        if (litros > quantidadeCombustivel) {
+            System.out.println("Não há combustível suficiente na bomba.");
+        } else {
+            quantidadeCombustivel -= litros;
+            System.out.println("Abastecimento realizado. Valor abastecido: " + valorAbastecido);
+        }
+    }
+
+    public void alterarValor(double novoValorLitro) {
+        valorLitro = novoValorLitro;
+        System.out.println("Valor do litro alterado para: " + novoValorLitro);
+    }
+
+    public void alterarCombustivel(String novoTipoCombustivel) {
+        tipoCombustivel = novoTipoCombustivel;
+        System.out.println("Tipo de combustível alterado para: " + novoTipoCombustivel);
+    }
+
+    public void alterarQuantidadeCombustivel(double novaQuantidadeCombustivel) {
+        quantidadeCombustivel = novaQuantidadeCombustivel;
+        System.out.println("Quantidade de combustível alterada para: " + novaQuantidadeCombustivel);
+    }
+}
+
+//Testando minha classe: 
+
+public class Atv{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o tipo de combustível: ");
+        String tipoCombustivel = scanner.nextLine();
+
+        System.out.print("Digite o valor do litro: ");
+        double valorLitro = scanner.nextDouble();
+
+        System.out.print("Digite a quantidade de combustível: ");
+        double quantidadeCombustivel = scanner.nextDouble();
+
+        BombaCombustivel bomba = new BombaCombustivel(tipoCombustivel, valorLitro, quantidadeCombustivel);
+
+        int opcao;
+        do {
+            System.out.println("Menu:");
+            System.out.println("1. Abastecer por valor");
+            System.out.println("2. Abastecer por litro");
+            System.out.println("3. Alterar valor do litro");
+            System.out.println("4. Alterar tipo de combustível");
+            System.out.println("5. Alterar quantidade de combustível");
+            System.out.println("0. Sair");
+            System.out.print("Escolha uma opção: ");
+            opcao = scanner.nextInt();
+
+            switch (opcao) {
+                case 1:
+                    System.out.print("Digite o valor desejado para abastecimento: ");
+                    double valorAbastecimento = scanner.nextDouble();
+ bomba.abastecerPorValor(valorAbastecimento);
+                    break;
+                case 2:
+                    System.out.print("Digite a quantidade de litros desejada para abastecimento: ");
+                    double litrosAbastecimento = scanner.nextDouble();
+                    bomba.abastecerPorLitro(litrosAbastecimento);
+                    break;
+                case 3:
+                    System.out.print("Digite o novo valor do litro: ");
+                    double novoValorLitro = scanner.nextDouble();
+                    bomba.alterarValor(novoValorLitro);
+                    break;
+                case 4:
+                    System.out.print("Digite o novo tipo de combustível: ");
+                    String novoTipoCombustivel = scanner.next();
+                    bomba.alterarCombustivel(novoTipoCombustivel);
+                    break;
+                case 5:
+                    System.out.print("Digite a nova quantidade de combustível: ");
+                    double novaQuantidadeCombustivel = scanner.nextDouble();
+                    bomba.alterarQuantidadeCombustivel(novaQuantidadeCombustivel);
+                    break;
+                case 0:
+                    System.out.println("Saindo...");
+                    break;
+                default:
+                    System.out.println("Opção inválida.");
+            }
+        } while (opcao != 0);
+
+        scanner.close();
+    }
+}
