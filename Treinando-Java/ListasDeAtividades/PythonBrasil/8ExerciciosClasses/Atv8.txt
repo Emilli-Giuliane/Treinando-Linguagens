@@ -1,0 +1,67 @@
+public class Macaco {
+    private String nome;
+    private String bucho;
+
+    public Macaco(String nome) {
+        this.nome = nome;
+        this.bucho = "";
+    }
+
+    public void comer(String alimento) {
+        if (bucho.isEmpty()) {
+            bucho += alimento;
+        } else {
+            bucho += ", " + alimento;
+        }
+    }
+
+    public void verBucho() {
+        if (bucho.isEmpty()) {
+            System.out.println(nome + " está com o bucho vazio.");
+        } else {
+            System.out.println(nome + " está comendo: " + bucho);
+        }
+    }
+
+    public void digerir() {
+        if (bucho.isEmpty()) {
+            System.out.println(nome + " não tem nada no bucho para digerir.");
+        } else {
+            System.out.println(nome + " está digerindo: " + bucho);
+            bucho = "";
+        }
+    }
+}
+
+//testando minha classe: 
+
+public class Atv{
+    public static void main(String[] args) {
+        Macaco macaco1 = new Macaco("Amaco");
+        Macaco macaco2 = new Macaco("Cocama");
+
+        macaco1.comer("Banana");
+        macaco1.comer("Maçã");
+        macaco1.comer("Pêssego");
+
+        macaco2.comer("Cenoura");
+        macaco2.comer("Uva");
+        macaco2.comer("Melancia");
+
+        macaco1.verBucho();
+        macaco2.verBucho();
+
+        macaco1.digerir();
+        macaco2.digerir();
+
+        macaco1.verBucho();
+        macaco2.verBucho();
+
+//testando pra saber se um macaco pode comer o outro pois fiquei curiosa também:
+
+       macaco1.comer(macaco2.nome);
+
+        macaco1.verBucho();
+        macaco2.verBucho();
+    }
+}
