@@ -47,7 +47,7 @@ public class Atv28 {
         if (formaPag == 't') {
             disconto = preco * 0.05;
             i = 1;
-        } //se cliente usou "t", então ele tem desconto. i recebe 1 como um auxilio para chamar o "if" mais fácil.
+        } //se cliente usou "t", então ele tem desconto. i recebe 1 como um auxilio para chamar o "if" mais fácil. Aprendi isso com os melhores, ehehe
         
         valorAPagar = preco - disconto;
         
