@@ -1,6 +1,6 @@
 //4. Faça um Programa que peça as 4 notas bimestrais e mostre a média.
 import java.util.Scanner;
-public class App {
+public class Atv4 {
     public static void main(String[] args) throws Exception {
 Scanner ler = new Scanner(System.in);
         System.out.println("Insira sua nota do primeiro, segundo, terceiro e quarto bimestre nesta mesma ordem: ");
