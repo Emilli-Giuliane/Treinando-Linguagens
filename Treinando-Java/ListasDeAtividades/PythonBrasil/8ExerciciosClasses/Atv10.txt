@@ -1,16 +1,19 @@
 import java.util.Scanner;
 
+//classe
 class BombaCombustivel {
     private String tipoCombustivel;
     private double valorLitro;
     private double quantidadeCombustivel;
 
+//construtores
     public BombaCombustivel(String tipoCombustivel, double valorLitro, double quantidadeCombustivel) {
         this.tipoCombustivel = tipoCombustivel;
         this.valorLitro = valorLitro;
         this.quantidadeCombustivel = quantidadeCombustivel;
     }
 
+//metodos
     public void abastecerPorValor(double valor) {
         double litrosAbastecidos = valor / valorLitro;
         if (litrosAbastecidos > quantidadeCombustivel) {
@@ -45,6 +48,7 @@ class BombaCombustivel {
         quantidadeCombustivel = novaQuantidadeCombustivel;
         System.out.println("Quantidade de combustível alterada para: " + novaQuantidadeCombustivel);
     }
+    //guetts e setts (eu sempre me esqueço dos nomes e da ordem)
 }
 
 //Testando minha classe: 
@@ -109,7 +113,7 @@ public class Atv{
                     System.out.println("Opção inválida.");
             }
         } while (opcao != 0);
-
+    //amei usar switch case. Vou fazer isso mais vezes, é muito mais fácil e divertido depois de pegar o jeito. Tomara que dê pra usar frequentemente como repetição. Anotando isso para não me esquecer disso mais tarde para fins didáticos.
         scanner.close();
     }
 }
