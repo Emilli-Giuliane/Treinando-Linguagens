@@ -5,7 +5,7 @@ public class TV {
     //supus esses valores e usei o this pra diferenciar.
         this.canal = 1;
         this.volume = 10;
-    }
+    }a
 
     public void mudarCanal(int novoCanal) {
         if (novoCanal >= 1 && novoCanal <= 100) {
