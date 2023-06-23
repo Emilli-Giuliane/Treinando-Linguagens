@@ -2,9 +2,11 @@
 import java.util.Scanner;
 public class App {
     public static void main(String[] args) throws Exception {
-            System.out.print("Informe um número inteiro: ");
-                Scanner ler = new Scanner(System.in);
-                int numero = ler.nextInt();
-            System.out.printf("O número informado foi: %d.",numero);
+	Scanner ler = new Scanner(System.in);
+
+	System.out.print("Informe um número inteiro: ");
+        int numero = ler.nextInt();
+
+        System.out.printf("O número informado foi: %d.",numero);
     }
 }
