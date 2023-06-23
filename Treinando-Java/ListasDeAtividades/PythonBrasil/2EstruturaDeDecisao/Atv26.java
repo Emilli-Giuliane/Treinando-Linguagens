@@ -7,7 +7,8 @@
  * Escreva um algoritmo que leia o número de litros vendidos, o tipo de combustível (codificado da seguinte forma: A-álcool, G-gasolina), calcule e imprima o valor a ser pago pelo cliente sabendo-se que o preço do litro da gasolina é R$ 2,50 o preço do litro do álcool é R$ 1,90.
 */
 import java.util.Scanner;
-public class Main {
+
+public class Atv26 {
     public static void main(String[] args) {
         Scanner read = new Scanner(System.in);
         System.out.println("Informe o tipo de combustível como \"a (álcool) e g (gasolina).");
