@@ -2,6 +2,7 @@ public class ContaCorrente {
     private int numeroConta;
     private String nomeCorrentista;
     private double saldo;
+
     //assim que funcionam os getts e sets mais tarde:
     public ContaCorrente(int numeroConta, String nomeCorrentista) {
         this.numeroConta = numeroConta;
