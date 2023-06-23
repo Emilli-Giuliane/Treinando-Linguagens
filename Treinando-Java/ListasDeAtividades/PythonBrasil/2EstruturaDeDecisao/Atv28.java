@@ -9,16 +9,16 @@
 import java.util.Scanner;
 public class Atv28 {
     public static void main(String[] args) {
-        System.out.println("<<< Seja bem-vindo ao Hipermercado Tabajara! >>>");        
-        Scanner read = new Scanner(System.in);
+        System.out.println("<<< Seja bem-vindo ao Hipermercado Tabajara! >>>");       
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Informe qual carne voce quer (f para \"file duplo\", a para \"alcatra\" ou p para \"picanha\"): ");
-        char carne = read.next().charAt(0);
+        char carne = scanner.next().charAt(0); //não sei o pq mas não consigo usar o "String" pro meu Scanner
         System.out.println("Informe a quantidade de carne: "); 
-        double qntdCarne = read.nextDouble();
+        double qntdCarne = scanner.nextDouble();
         System.out.println("Qual a forma de pagamento? (d para \"dinheiro\", c para \"cartao\" ou t para \"cartao_tabajara\"): ");
-        char formaPag= read.next().charAt(0);
+        char formaPag= scanner.next().charAt(0);
         double valorAPagar;
-        read.close();
+        scanner.close();
         
         int i = 0;
         double preco = 0;
@@ -47,7 +47,9 @@ public class Atv28 {
         if (formaPag == 't') {
             disconto = preco * 0.05;
             i = 1;
-        } valorAPagar = preco - disconto;
+        } //se cliente usou "t", então ele tem desconto. i recebe 1 como um auxilio para chamar o "if" mais fácil.
+        
+        valorAPagar = preco - disconto;
         
         System.out.println("Cupom fiscal••••••\n\nTipi da carne: " + carne);
         System.out.println("Quantidade de carne comprada: " + qntdCarne);
