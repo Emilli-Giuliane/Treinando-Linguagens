@@ -26,7 +26,13 @@ public class BichinhoVirtual {
     public void alterarIdade(int novaIdade) {
         this.idade = novaIdade;
     }
-
+    
+    public void fazerCarinho() {
+        this.saude ++;
+        System.out.println("Voce fez carinho em "+this.nome);
+    } //eu quis fazer carinho no meu bixinho imaginário.
+        
+//obs.: estou marcando com comentário os gets e sets pra não me perder. Lembrar de apagar esse coment dps
     public String getNome() {
         return nome;
     }
@@ -45,35 +51,38 @@ public class BichinhoVirtual {
 
     public String getHumor() {
         if (fome < 5 && saude >= 7) {
-            return "Feliz";
+            return "Feliz [ :D ]";
         } else if (fome >= 5 && saude >= 7) {
-            return "Faminto";
+            return "Faminto [ :P ]";
         } else if (fome < 5 && saude < 7) {
-            return "Triste";
+            return "Triste [ :,( ]";
         } else {
-            return "Muito triste";
+            return "Muito triste [ X,0 ]";
         }
     }
 }
 
 //testando minha classe: 
 
-public class Atv{
+class Main {
     public static void main(String[] args) {
         BichinhoVirtual tamagotchi = new BichinhoVirtual("Maurio", 3, 8, 2);
-
+        
         System.out.println("Nome: " + tamagotchi.getNome());
         System.out.println("Fome: " + tamagotchi.getFome());
         System.out.println("Saúde: " + tamagotchi.getSaude());
         System.out.println("Idade: " + tamagotchi.getIdade());
         System.out.println("Humor: " + tamagotchi.getHumor());
+        
+        tamagotchi.fazerCarinho();
+        System.out.println("A saúde agora é: "+ tamagotchi.getSaude());
 
-        tamagotchi.alterarNome("Novo Bichinho");
+        tamagotchi.alterarNome("Amongus");
         tamagotchi.alterarFome(6);
         tamagotchi.alterarSaude(4);
         tamagotchi.alterarIdade(3);
-
-        System.out.println("Nome após alteração: " + tamagotchi.getNome());
+        
+        System.out.println("\n\nNome após alteração: " + tamagotchi.getNome());//aprendi a mostrar alterações do jeito que eu queria na Atv5, que felicidade! Era bem simples na verdade, que vergonha XD
         System.out.println("Fome após alteração: " + tamagotchi.getFome());
         System.out.println("Saúde após alteração: " + tamagotchi.getSaude());
         System.out.println("Idade após alteração: " + tamagotchi.getIdade());
