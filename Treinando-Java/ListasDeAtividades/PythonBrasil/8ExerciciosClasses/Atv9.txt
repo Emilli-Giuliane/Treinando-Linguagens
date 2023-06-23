@@ -79,7 +79,6 @@ public class Atv{
                     System.out.println("Opção inválida.");
             }
         } while (opcao != 0);
-        //notas para mim mesma (apagar antes de postar): Meu amigo, o trabalhão que deu pra aprender isso e fazer funcionar não tá escrito! Vou até dormir dps dessa, meu "java" do céu! Mas eu gostei ehehe, switch case é satsfatório, não sei. O jeito que ele me conquistou como sendo um loop é diferente.
         scanner.close();
     }
 }
