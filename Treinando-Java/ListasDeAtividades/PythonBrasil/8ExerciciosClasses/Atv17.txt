@@ -85,7 +85,7 @@ public class FazendaBichinhosApp {
         // Menu
         int opcao;
         do {
-            System.out.println("\n=== FAZENDA DE BICHINHOS ===");
+            System.out.println("\n<=< FAZENDA DE BICHINHOS >=>");
             System.out.println("1. Alimentar todos os bichinhos");
             System.out.println("2. Brincar com todos os bichinhos");
             System.out.println("3. Ouvir todos os bichinhos");
@@ -118,3 +118,4 @@ public class FazendaBichinhosApp {
         } while (opcao != 0);
     }
 }
+//devo dizer que não fiz isso sozinha, eu pedi ajuda e ví muito material pra me ajudar a fazer isso. chatgpt e meus amigos me deram dicas bem legais tipo usar o arraylist e o list e eu quis tentar. Próximo passo é criar um bixinho virtual que morre e brinca de pedra papel e tesoura.
