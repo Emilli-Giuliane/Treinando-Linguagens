@@ -12,7 +12,7 @@ public class Atv28 {
         System.out.println("<<< Seja bem-vindo ao Hipermercado Tabajara! >>>");       
         Scanner scanner = new Scanner(System.in);
         System.out.println("Informe qual carne voce quer (f para \"file duplo\", a para \"alcatra\" ou p para \"picanha\"): ");
-        char carne = scanner.next().charAt(0); //não sei o pq mas não consigo usar o "String" pro meu Scanner
+        char carne = scanner.next().charAt(0); //não sei o pq mas não consigo usar o "String" pro meu Scanner.
         System.out.println("Informe a quantidade de carne: "); 
         double qntdCarne = scanner.nextDouble();
         System.out.println("Qual a forma de pagamento? (d para \"dinheiro\", c para \"cartao\" ou t para \"cartao_tabajara\"): ");
