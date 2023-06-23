@@ -1,16 +1,5 @@
 //1.Faça um Programa que mostre a mensagem "Alo mundo" na tela.
-import java.util.Scanner;
-public class App {
-    public static void main(String[] args) throws Exception {
-            System.out.print("Alo mundo!");
-    }
-}
 
-
-
-
-
-import java.util.Scanner;
 public class App {
     public static void main(String[] args) throws Exception {
             String escrito = "Alo mundo";
