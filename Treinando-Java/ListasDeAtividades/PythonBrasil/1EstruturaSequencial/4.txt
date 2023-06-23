@@ -19,4 +19,4 @@ ler.close();
             System.out.printf("Sua nota é igual a %d. Você foi reprovado.",media);
         }
     }
-}
+} //olhando pra isso depois de muito tempo vejo que eu tava tentando apenas criar uma nova moda de escrever códigos feios ou algo assim ehehe. Vou arrumar todos depois e deixar tudo bonitinho
