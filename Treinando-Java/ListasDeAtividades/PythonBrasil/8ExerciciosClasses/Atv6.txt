@@ -2,6 +2,7 @@ public class TV {
     private int canal;
     private int volume;
     public TV() {
+    //supus esses valores e usei o this pra diferenciar.
         this.canal = 1;
         this.volume = 10;
     }
@@ -14,7 +15,8 @@ public class TV {
             System.out.println("Canal inválido.");
         }
     }
-
+    
+//deixar o volume menor que 100 não foi ideia minha mas eu gostei e vou usar futuramente.
     public void aumentarVolume() {
         if (volume < 100) {
             this.volume++;
@@ -23,7 +25,7 @@ public class TV {
             System.out.println("Volume máximo atingido.");
         }
     }
-
+//o mesmo com diminuir volume. Usei o "--" pois acho melhor em contagens.
     public void diminuirVolume() {
         if (volume > 0) {
             this.volume--;
@@ -33,7 +35,7 @@ public class TV {
         }
     }
 
-    // Getters e Settersa
+    //nota pra eu lembrar como usa: Gets e sets
     public int getCanal() {
         return canal;
     }
@@ -51,16 +53,16 @@ public class TV {
     }
 }
 
-//testando minha classe
-
+//testando minha classe em txt
 public class Atv {
     public static void main(String[] args) {
-        TV tv = new TV();
-        tv.mudarCanal(5);
-        tv.aumentarVolume();
-        tv.diminuirVolume();
+        //minha tv aqui de casa também se chama robson
+        TV robson = new TV();
+        robson.mudarCanal(5);
+        robson.aumentarVolume();
+        robson.diminuirVolume();
 
-        System.out.println("Canal atual: "+tv.getCanal());
-        System.out.println("Volume atual: "+tv.getVolume());
+        System.out.println("Canal atual: "+robson.getCanal());
+        System.out.println("Volume atual: "+robson.getVolume());
     }
 }
