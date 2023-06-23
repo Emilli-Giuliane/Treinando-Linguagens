@@ -1,15 +1,19 @@
 //3. Faça um Programa que peça dois números e imprima a soma.
 import java.util.Scanner;
-public class App {
+
+public class Atv3 {
     public static void main(String[] args) throws Exception {
-            Scanner ler = new Scanner(System.in);
+        Scanner ler = new Scanner(System.in);
+
         System.out.println("Insira seu número: ");
-            int n1 = ler.nextInt();
+        int n1 = ler.nextInt();
         System.out.println("Insira seu número: ");
-            int n2 = ler.nextInt();
-            int soma = n1 + n2;
+        int n2 = ler.nextInt();
+        int soma = n1 + n2;
+
         System.out.println("A soma dos números informados é igual a: "+soma);
-//ou
+
+//ou, também pode ser dessa forma:
         System.out.printf("A soma dos números informados é igual a: %d",soma);
     }
 }
