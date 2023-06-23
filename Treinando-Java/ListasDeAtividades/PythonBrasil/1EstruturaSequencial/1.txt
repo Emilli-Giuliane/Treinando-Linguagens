@@ -1,10 +1,11 @@
 //1.Faça um Programa que mostre a mensagem "Alo mundo" na tela.
 
-public class App {
+public class Atv1 {
     public static void main(String[] args) throws Exception {
-            String escrito = "Alo mundo";
-            System.out.println(escrito);
-            System.out.printf("%s",escrito);
-            System.out.println();
+            String escrito = "Alo mundo";//declarei uma variável "escrito" e atribuí um valor "Alo mundo" do tipo "String"
+
+            System.out.println(escrito);//mostra o conteúdo da variável "escrito"
+            System.out.printf("%s",escrito);//existe "printf" com sinais: "%s" - para String; "%.2f" - para double ou float; "%d" - para int.
+            System.out.println("E também pode ser escrito dessa maneira: Alo mundo!");
     }
 }
