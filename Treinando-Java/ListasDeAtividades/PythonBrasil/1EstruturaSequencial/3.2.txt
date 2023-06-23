@@ -1,6 +1,7 @@
-//3.2
+//outra versão do 3 porém com subtração, divisão e multiplição
+
 import java.util.Scanner;
-public class App {
+public class Atv3 {
     public static void main(String[] args) throws Exception {
                 Scanner ler = new Scanner(System.in);
         System.out.println("Insira seu número: ");
