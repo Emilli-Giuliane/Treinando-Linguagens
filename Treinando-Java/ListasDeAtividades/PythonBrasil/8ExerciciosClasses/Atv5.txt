@@ -2,22 +2,18 @@ public class ContaCorrente {
     private int numeroConta;
     private String nomeCorrentista;
     private double saldo;
-    public ContaCorrente(int numeroConta, String nomeCorrentista){
+    //assim que funcionam os getts e sets mais tarde:
+    public ContaCorrente(int numeroConta, String nomeCorrentista) {
         this.numeroConta = numeroConta;
         this.nomeCorrentista = nomeCorrentista;
         this.saldo = 0.0;
     }
 
-    public ContaCorrente(int numeroConta, String nomeCorrentista, double saldo) {
-        this.numeroConta = numeroConta;
-        this.nomeCorrentista = nomeCorrentista;
-        this.saldo = saldo;
-    }
     public void alterarNome(String novoNome) {
         this.nomeCorrentista = novoNome;
     }
     public void deposito(double valor) {
-        this.saldo += valor;
+        this.saldo += valor;//usando "+=" pois quero adicionar um valor, diferente de uma contagem ("++").
     }
     public void saque(double valor) {
         if (valor <= saldo) {
@@ -52,3 +48,17 @@ public class ContaCorrente {
         this.saldo = saldo;
     }
 }
+public class Atv {
+    public static void main(String[]args){
+        //nota pra mim: queria randomizar o número da conta tipo oq o mysql faz com as pks, vou aprender e depois aprimorar tudo isso.
+        ContaCorrente cc = new ContaCorrente(8,"Alfredo");
+        cc.alterarNome("Alfred");
+        //nota pra mim: lembrar de tentar aprimorar e mostrar na tela o nome antigo e o nome alterado.
+        cc.deposito(298);
+        cc.saque(78);
+        
+        System.out.println("O número dessa conta é: "+cc.getNumeroConta());
+        System.out.println("O nome do correntista é: "+cc.getNomeCorrentista());
+        System.out.println("Seu saldo é de: "+cc.getSaldo());
+        }
+    }
