@@ -35,33 +35,34 @@ public class Macaco {
 
 //testando minha classe: 
 
-public class Atv{
+public class Atv {
     public static void main(String[] args) {
-        Macaco macaco1 = new Macaco("Amaco");
-        Macaco macaco2 = new Macaco("Cocama");
+        Macaco magaco1 = new Macaco("Amaco");
+        Macaco magaco2 = new Macaco("Cocama");
 
-        macaco1.comer("Banana");
-        macaco1.comer("Maçã");
-        macaco1.comer("Pêssego");
+        magaco1.comer("Banana");
+        magaco1.comer("Maçã");
+        magaco1.comer("Pêssego");
 
-        macaco2.comer("Cenoura");
-        macaco2.comer("Uva");
-        macaco2.comer("Melancia");
+        magaco2.comer("Guaraná");
+        magaco2.comer("Uva");
+        magaco2.comer("Melancia");
 
-        macaco1.verBucho();
-        macaco2.verBucho();
+        magaco1.verBucho();
+        magaco2.verBucho();
 
-        macaco1.digerir();
-        macaco2.digerir();
+        magaco1.digerir();
+        magaco2.digerir();
 
-        macaco1.verBucho();
-        macaco2.verBucho();
+        magaco1.verBucho();
+        magaco2.verBucho();
 
 //testando pra saber se um macaco pode comer o outro pois fiquei curiosa também:
 
-       macaco1.comer(macaco2.nome);
+       magaco1.comer(magaco2.nome);
 
-        macaco1.verBucho();
-        macaco2.verBucho();
+        magaco1.verBucho();
+        magaco2.verBucho();
+        //magaco comeu o nome do outro magaco, porém quando mando rodar o código dá um erro que diz que magaco2 tem nome privado, sendo assim magaco1 não pode acessar e comer magaco2, menos mal.
     }
 }
