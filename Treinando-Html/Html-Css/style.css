@@ -1,0 +1,34 @@
+body {
+    background-color: azure;
+}
+span {
+    color:blue;
+}
+.centralizarImagem {
+    display: flex;
+    display: -webkit-flex; /* Garante compatibilidade com navegador Safari. */
+}
+/* .estilo_tabela {
+    border-color:black;
+    background-color: whitesmoke;
+} */
+table {
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    border:solid 1px gray;
+    }
+    table thead th{
+        background-color:black;
+        color:white;
+    }
+    table tbody tr:nth-child(even) td{
+        background-color:lightblue;
+    }
+    table tbody tr:hover td {
+        background-color:lightgoldenrodyellow;
+        cursor: pointer;
+    }
+    table tfoot td {
+        background-color: lightgray;
+    }
